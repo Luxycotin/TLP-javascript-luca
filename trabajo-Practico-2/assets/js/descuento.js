@@ -1,10 +1,14 @@
-let cantidad = parseInt(prompt('Escriba la cantidad de '));
-let precio = parseInt(prompt('Escriba el precio del producto'));
-let total = (cantidad*precio);
-let descuento = total*0.20;
-let totdes = (total - descuento);
+let articulos =parseInt(prompt('Cuantos artículos desea comprar?'))
+let precio = parseInt(prompt('Cuál es el valor de los productos?'))
+let total = articulos*precio;
+let descuento = total*0.15;
 
+switch(true){
+    case total>=20000 && articulos>=10:
+        console.log('Se le descontará  $',(descuento), ' de su total a pagar, que será de:  $',(total-descuento))
+        break;
 
-if (total > 20000){
-    console.log('')
+        default:
+            console.log('Usted no aplica para el descuento, su total es: $',(total))
+            break;
 }
